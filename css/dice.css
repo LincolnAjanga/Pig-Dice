@@ -1,1 +1,8 @@
 /*css styling for pig dice*/
+
+.page-Header{
+	font-family:Pacifico;
+	font-size: 70px;
+	text-align: center;
+	font-weight: bold;
+}

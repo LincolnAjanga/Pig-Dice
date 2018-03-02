@@ -19,15 +19,18 @@ body{
 
 }
 
-#btn1{
-	align-content: center;
-	width: 70px
+#btnCool{
+	align-content: right;
+	width: 150px
 }
 
 #wht{
 	color: #fff;
 }
 
+#me{
+	float:left;
 
+}
 
 

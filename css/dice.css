@@ -9,10 +9,25 @@
 }
 
 body{
-	background: url('/home/lincoln/Documents/pigDice/img/ dracarys.jpg');
+	background: url('/home/lincoln/Documents/pigDice/img/200.webp');
 	margin: auto;
 	padding: 0px;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
 
 }
+
+#btn1{
+	align-content: center;
+	width: 70px
+}
+
+#wht{
+	color: #fff;
+}
+
+
+
+

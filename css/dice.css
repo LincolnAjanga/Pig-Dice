@@ -18,6 +18,10 @@ body{
 
 
 }
+.good{
+	height:50px;
+	width:500px;
+}
 
 #btnCool{
 	align-content: right;
@@ -33,4 +37,12 @@ body{
 
 }
 
-
+#trans{
+	background: transparent;
+	height:40px;
+}
+#mesh{
+ float: right;
+ width:500px;
+ background: purple;
+}

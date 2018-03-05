@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="img/dice logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<title>Play pigDice</title>
+	<style>
+		h1{
+	font-family:Pacifico;
+	font-size: 70px;
+	text-align: center;
+	font-weight: bold;
+	color: indigo;
+}
+
+.pig{
+	text-align: center;
+	font-size: 50px;
+}
+#push{
+	padding-left: 200px;
+}	
+
+div.dice1{
+	float: left;
+	width:32px;
+	background: red;
+	color: #fff;
+	border: #999 1px solid;
+	padding:10px;
+	font-size: 24px;
+	text-align: center;
+	margin: 5px;
+}
+
+div.dice2{
+	float: left;
+	width:32px;
+	background:blue;
+	color: #fff;
+	border: #999 1px solid;
+	padding:10px;
+	font-size: 24px;
+	text-align: center;
+	margin: 5px;
+}
+
+.player1{
+	font-family: Pacifico;
+	color: red;
+}
+
+.player2{
+	font-family: Pacifico;
+	color: blue;
+}
+</style>
+</head>
+<h1>Welcome to pigDice</h1>
+<body>
+<div class="container">
+	<div class="jumbotron"></br>
+		<h1 class="pig">Let's play pigDice</h1>
+		<div class="row">
+			<div class="col-6">
+				<h2 class="player1">Player One</h2>
+				<img src="/home/lincoln/Documents/pigDice/img/dicered.png"></br></br>
+				<button onclick="rollRedDice()" class="btn btn-lg btn-danger">Roll Red Dice</button>
+				<h2 id="status"></h2>
+				<div class="dice1 btn btn-lg btn-dander" id="die1">0</div>
+				<div class="dice1 btn btn-lg btn-dander" id="die2">0</div>
+				<h2 id="status1" style="clear: left;"></h2>
+			</div>
+			<div class="col-6" id="push">
+				<h2 class="player2">Player Two</h2>
+				<img src="/home/lincoln/Documents/pigDice/img/diceblue.png"></br></br>
+				<button onclick="rollBlueDice()" class="btn btn-lg btn-primary">Roll Blue Dice</button>
+				<div class="dice2 btn btn-lg btn-primary" id="die3">0</div>
+				<div class="dice2 btn btn-lg btn-primary" id="die4">0</div>
+				<h2 id="status2" style="clear: right;"></h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Javascript logic for player one --red player --
+
+	function rollRedDice() {
+		var die1 = document.getElementById('die1');
+		var die2 = document.getElementById('die2');
+		var status1 = document.getElementById('status1');
+
+		var d1 = Math.floor(Math.random()*6) + 1;
+		var d2 = Math.floor(Math.random()*6) + 1;
+
+		var diceTotal1 =  d1 + d2;
+		die1.innerHTML = d1;
+		die2.innerHTML = d2;
+		status1.innerHTML = "You rolled a " + " "+ diceTotal1;
+
+		if (d1===d2) {
+			status2.innerHTML = "You rolled a DOUBLE! You get to roll again!!!";
+		}
+	}
+
+	//Javascript logic for player two --blue player--
+
+	function rollBlueDice() {
+		var die3 = document.getElementById('die3');
+		var die4 = document.getElementById('die4');
+		var status2 = document.getElementById('status2');
+
+		var d3 = Math.floor(Math.random()*6) + 1;
+		var d4 = Math.floor(Math.random()*6) + 1;
+
+		var diceTotal2 = d3 + d4;
+		die3.innerHTML = die3;
+		die4.innerHTML = die4;
+		status2.innerHTML = "You rolled a" + " "+diceTotal2;
+
+		if (d3===d4) {
+			status2.innerHTML = "You rolled a DOUBLE! You get to roll again!!!";
+		}
+
+	}
+
+</script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

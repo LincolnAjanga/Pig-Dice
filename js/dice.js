@@ -3,12 +3,12 @@
 //Javascript welcome logic
 
 var welcomeToPigDice = function(){
-	var result = ""
+	var result = " "
 	if (userInput ! = " ") {
-		result.push('Welcome'+' '+userInput+' '+'to pigDice!'); 
+		result.text('Welcome'+' '+userInput+' '+'to pigDice!'); 
 	}
 	else{
-		result.push('Please retype your name and try again!');
+		result.text('Please retype your name and try again!');
 	}
 
 return result;
